@@ -1,9 +1,10 @@
 import pandas as pd
 
 from src.agents.technical.opinion import TechnicalOpinionAgent
+from src.agents.ml.opinion import MLOpinionAgent
 from src.committee.orchestrator import InvestmentCommitteeOrchestrator
 
-FEATURES_FILE = "data/processed/features_clean.csv"
+FEATURES_FILE = "data/processed/ml_predictions.csv"
 
 
 def main():
@@ -13,6 +14,7 @@ def main():
 
     agents = [
         TechnicalOpinionAgent(),
+        MLOpinionAgent(),
     ]
 
     committee = InvestmentCommitteeOrchestrator(agents)
