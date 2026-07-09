@@ -21,3 +21,5 @@ data/processed/
 
 # Jupyter
 .ipynb_checkpoints/
+
+data/committee_memory.json
