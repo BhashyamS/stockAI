@@ -1,0 +1,23 @@
+# Virtual Environment
+.venv/
+
+# Environment Variables
+.env
+src/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Models
+models/*.pkl
+
+# Data (optional)
+data/raw/
+data/processed/
+
+# Database
+*.db
+
+# Jupyter
+.ipynb_checkpoints/
