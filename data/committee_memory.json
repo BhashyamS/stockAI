@@ -1,0 +1,919 @@
+[
+  {
+    "timestamp": "2026-07-09T13:20:27.299235",
+    "ticker": "AAPL",
+    "committee_result": {
+      "ticker": "AAPL",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "AAPL",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "bullish_evidence": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [],
+            "evidence": {
+              "close": 275.1499938964844,
+              "ha_color": "RED",
+              "rsi_14": 22.904770329844595,
+              "ma_50": 291.0597430419922,
+              "ma_200": 268.825083694458,
+              "momentum_10": -0.0563481495041129,
+              "atr_ratio": 0.0325381196414895,
+              "drop_from_20d_high": -0.1270622359121008
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "AAPL",
+            "action": "HOLD",
+            "confidence": 0.04,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.4791945868810153,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.04
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 2,
+        "sell_votes": 0,
+        "avg_confidence": 0.02
+      },
+      "weighted_vote": {
+        "final_action": "HOLD",
+        "committee_score": 0.0,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "weight": 0.35,
+            "contribution": 0.0
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.04,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": false,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "HOLD",
+            "confidence": 0.0,
+            "bullish_case": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "risks": []
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.04,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents broadly agree."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.565713",
+    "ticker": "AMZN",
+    "committee_result": {
+      "ticker": "AMZN",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "AMZN",
+            "action": "SELL",
+            "confidence": 0.33,
+            "bullish_evidence": [
+              "MA50 is above MA200"
+            ],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ],
+            "evidence": {
+              "close": 227.009994506836,
+              "ha_color": "RED",
+              "rsi_14": 29.55101230443566,
+              "ma_50": 256.44500030517577,
+              "ma_200": 232.79535011291503,
+              "momentum_10": -0.0461764936687563,
+              "atr_ratio": 0.0372544937483921,
+              "drop_from_20d_high": -0.1714963704130073
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "AMZN",
+            "action": "HOLD",
+            "confidence": 0.03,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.4869306372674513,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.03
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 1,
+        "sell_votes": 1,
+        "avg_confidence": 0.18
+      },
+      "weighted_vote": {
+        "final_action": "HOLD",
+        "committee_score": -0.178,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "SELL",
+            "confidence": 0.33,
+            "weight": 0.35,
+            "contribution": -0.11549999999999999
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.03,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": true,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "SELL",
+            "confidence": 0.33,
+            "bullish_case": [
+              "MA50 is above MA200"
+            ],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ]
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.03,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents disagree, so the CIO should weigh conflicting evidence."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.584399",
+    "ticker": "GOOGL",
+    "committee_result": {
+      "ticker": "GOOGL",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "GOOGL",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "bullish_evidence": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [],
+            "evidence": {
+              "close": 343.7099914550781,
+              "ha_color": "RED",
+              "rsi_14": 30.47893958578676,
+              "ma_50": 369.1060095214844,
+              "ma_200": 313.007518157959,
+              "momentum_10": -0.0355519761326132,
+              "atr_ratio": 0.0352072590791229,
+              "drop_from_20d_high": -0.1184597956708237
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "GOOGL",
+            "action": "HOLD",
+            "confidence": 0.05,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.4745627197377882,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.05
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 2,
+        "sell_votes": 0,
+        "avg_confidence": 0.025
+      },
+      "weighted_vote": {
+        "final_action": "HOLD",
+        "committee_score": 0.0,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "weight": 0.35,
+            "contribution": 0.0
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.05,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": false,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "HOLD",
+            "confidence": 0.0,
+            "bullish_case": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "risks": []
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.05,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents broadly agree."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.601173",
+    "ticker": "META",
+    "committee_result": {
+      "ticker": "META",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "META",
+            "action": "SELL",
+            "confidence": 0.5,
+            "bullish_evidence": [],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "MA50 is not above MA200",
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ],
+            "evidence": {
+              "close": 542.8699951171875,
+              "ha_color": "RED",
+              "rsi_14": 25.39072599826011,
+              "ma_50": 614.8397741699218,
+              "ma_200": 649.9291955566406,
+              "momentum_10": -0.0483499627766101,
+              "atr_ratio": 0.0377500112227147,
+              "drop_from_20d_high": -0.144684854331008
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "META",
+            "action": "HOLD",
+            "confidence": 0.06,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.5300084884972605,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.06
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 1,
+        "sell_votes": 1,
+        "avg_confidence": 0.28
+      },
+      "weighted_vote": {
+        "final_action": "SELL",
+        "committee_score": -0.269,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "SELL",
+            "confidence": 0.5,
+            "weight": 0.35,
+            "contribution": -0.175
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.06,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": true,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "SELL",
+            "confidence": 0.5,
+            "bullish_case": [],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ]
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.06,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents disagree, so the CIO should weigh conflicting evidence."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.616524",
+    "ticker": "MSFT",
+    "committee_result": {
+      "ticker": "MSFT",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "MSFT",
+            "action": "SELL",
+            "confidence": 0.5,
+            "bullish_evidence": [],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "MA50 is not above MA200",
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ],
+            "evidence": {
+              "close": 352.8299865722656,
+              "ha_color": "RED",
+              "rsi_14": 15.253147265612585,
+              "ma_50": 411.26919494628913,
+              "ma_200": 446.8837908935547,
+              "momentum_10": -0.1120646275942938,
+              "atr_ratio": 0.033881147076257,
+              "drop_from_20d_high": -0.2338443607454554
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "MSFT",
+            "action": "HOLD",
+            "confidence": 0.19,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.5940620184088451,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.19
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 1,
+        "sell_votes": 1,
+        "avg_confidence": 0.345
+      },
+      "weighted_vote": {
+        "final_action": "SELL",
+        "committee_score": -0.269,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "SELL",
+            "confidence": 0.5,
+            "weight": 0.35,
+            "contribution": -0.175
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.19,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": true,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "SELL",
+            "confidence": 0.5,
+            "bullish_case": [],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ]
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.19,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents disagree, so the CIO should weigh conflicting evidence."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.635475",
+    "ticker": "NVDA",
+    "committee_result": {
+      "ticker": "NVDA",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "NVDA",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "bullish_evidence": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [],
+            "evidence": {
+              "close": 195.7400054931641,
+              "ha_color": "RED",
+              "rsi_14": 32.673118853602176,
+              "ma_50": 210.0400210571289,
+              "ma_200": 190.31799858093265,
+              "momentum_10": -0.0233509266467321,
+              "atr_ratio": 0.0379548753103683,
+              "drop_from_20d_high": -0.1265460074326558
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "NVDA",
+            "action": "HOLD",
+            "confidence": 0.02,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.4896690423265001,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.02
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 2,
+        "sell_votes": 0,
+        "avg_confidence": 0.01
+      },
+      "weighted_vote": {
+        "final_action": "HOLD",
+        "committee_score": 0.0,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "HOLD",
+            "confidence": 0.0,
+            "weight": 0.35,
+            "contribution": 0.0
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.02,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": false,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "HOLD",
+            "confidence": 0.0,
+            "bullish_case": [
+              "Price is above MA200",
+              "MA50 is above MA200"
+            ],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "10-day momentum is negative"
+            ],
+            "risks": []
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.02,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents broadly agree."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.652917",
+    "ticker": "SPY",
+    "committee_result": {
+      "ticker": "SPY",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "SPY",
+            "action": "HOLD",
+            "confidence": 0.33,
+            "bullish_evidence": [
+              "Price is above MA200",
+              "MA50 is above MA200",
+              "10-day momentum is positive"
+            ],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red"
+            ],
+            "neutral_evidence": [],
+            "risks": [],
+            "evidence": {
+              "close": 734.2999877929688,
+              "ha_color": "RED",
+              "rsi_14": 39.61019127192544,
+              "ma_50": 732.0746472167968,
+              "ma_200": 686.4120513916016,
+              "momentum_10": 0.0148349577525048,
+              "atr_ratio": 0.01673142733518,
+              "drop_from_20d_high": -0.0307783478963719
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "SPY",
+            "action": "HOLD",
+            "confidence": 0.06,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.4676095727027962,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.06
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 2,
+        "sell_votes": 0,
+        "avg_confidence": 0.195
+      },
+      "weighted_vote": {
+        "final_action": "HOLD",
+        "committee_score": 0.0,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "HOLD",
+            "confidence": 0.33,
+            "weight": 0.35,
+            "contribution": 0.0
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.06,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": false,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "HOLD",
+            "confidence": 0.33,
+            "bullish_case": [
+              "Price is above MA200",
+              "MA50 is above MA200",
+              "10-day momentum is positive"
+            ],
+            "bearish_case": [
+              "Heikin Ashi candle is red"
+            ],
+            "risks": []
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.06,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents broadly agree."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-07-09T13:20:27.670463",
+    "ticker": "TSLA",
+    "committee_result": {
+      "ticker": "TSLA",
+      "vote_summary": {
+        "opinions": [
+          {
+            "agent_name": "Technical Agent",
+            "role": "Evaluates chart structure, trend, Heikin Ashi, RSI, momentum, and volatility.",
+            "ticker": "TSLA",
+            "action": "SELL",
+            "confidence": 0.5,
+            "bullish_evidence": [],
+            "bearish_evidence": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "neutral_evidence": [
+              "MA50 is not above MA200",
+              "Stock is down more than 5% from 20-day high"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ],
+            "evidence": {
+              "close": 375.1199951171875,
+              "ha_color": "RED",
+              "rsi_14": 36.08452167436025,
+              "ma_50": 405.0097998046876,
+              "ma_200": 417.8010002136231,
+              "momentum_10": -0.0169553743095877,
+              "atr_ratio": 0.0505076419231736,
+              "drop_from_20d_high": -0.1515042073323226
+            }
+          },
+          {
+            "agent_name": "ML Agent",
+            "role": "Evaluates machine learning probability, model confidence, and statistical edge.",
+            "ticker": "TSLA",
+            "action": "HOLD",
+            "confidence": 0.02,
+            "bullish_evidence": [],
+            "bearish_evidence": [],
+            "neutral_evidence": [
+              "ML model does not show a strong statistical edge"
+            ],
+            "risks": [
+              "Model confidence is weak"
+            ],
+            "evidence": {
+              "ml_probability_5d_up": 0.5081474704421598,
+              "ml_signal": "HOLD",
+              "model_confidence": 0.02
+            }
+          }
+        ],
+        "buy_votes": 0,
+        "hold_votes": 1,
+        "sell_votes": 1,
+        "avg_confidence": 0.26
+      },
+      "weighted_vote": {
+        "final_action": "SELL",
+        "committee_score": -0.269,
+        "vote_details": [
+          {
+            "agent": "Technical Agent",
+            "action": "SELL",
+            "confidence": 0.5,
+            "weight": 0.35,
+            "contribution": -0.175
+          },
+          {
+            "agent": "ML Agent",
+            "action": "HOLD",
+            "confidence": 0.02,
+            "weight": 0.3,
+            "contribution": 0.0
+          }
+        ]
+      },
+      "debate": {
+        "has_disagreement": true,
+        "debate_points": [
+          {
+            "agent": "Technical Agent",
+            "position": "SELL",
+            "confidence": 0.5,
+            "bullish_case": [],
+            "bearish_case": [
+              "Heikin Ashi candle is red",
+              "Price is below MA200",
+              "10-day momentum is negative"
+            ],
+            "risks": [
+              "Long-term trend may be weakening"
+            ]
+          },
+          {
+            "agent": "ML Agent",
+            "position": "HOLD",
+            "confidence": 0.02,
+            "bullish_case": [],
+            "bearish_case": [],
+            "risks": [
+              "Model confidence is weak"
+            ]
+          }
+        ],
+        "summary": "Agents disagree, so the CIO should weigh conflicting evidence."
+      }
+    }
+  }
+]

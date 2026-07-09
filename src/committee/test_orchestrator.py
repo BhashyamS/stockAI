@@ -9,7 +9,6 @@ FEATURES_FILE = "data/processed/ml_predictions.csv"
 
 def main():
     df = pd.read_csv(FEATURES_FILE)
-
     latest = df.sort_values("Date").groupby("Ticker").tail(1)
 
     agents = [
@@ -20,12 +19,12 @@ def main():
     committee = InvestmentCommitteeOrchestrator(agents)
 
     for _, row in latest.iterrows():
-        opinions = committee.collect_opinions(row)
-        summary = committee.summarize_votes(opinions)
+        result = committee.run_committee(row)
 
         print("\n" + "=" * 60)
-        print(row["Ticker"])
-        print(summary)
+        print(result["ticker"])
+        print("Final weighted vote:", result["weighted_vote"])
+        print("Debate:", result["debate"]["summary"])
 
 
 if __name__ == "__main__":
