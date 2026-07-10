@@ -13,6 +13,7 @@ FEATURES_FILE = Path("data/processed/features_clean.csv")
 SUMMARY_FILE = Path("data/processed/structured_committee_summary.csv")
 RESULTS_FILE = Path("data/processed/structured_committee_results.json")
 CIO_FILE = Path("data/processed/structured_cio_memos.csv")
+MEMORY_SUMMARY_FILE = Path("data/processed/committee_memory_summary.csv")
 
 
 @st.cache_data
@@ -31,7 +32,13 @@ def load_data():
     else:
         cio = pd.DataFrame()
 
-    return features, summary, results, cio
+    if MEMORY_SUMMARY_FILE.exists():
+        memory = pd.read_csv(MEMORY_SUMMARY_FILE)
+        memory["Timestamp"] = pd.to_datetime(memory["Timestamp"])
+    else:
+        memory = pd.DataFrame()
+
+    return features, summary, results, cio, memory
 
 
 def emoji(action):
@@ -115,7 +122,7 @@ def build_chart(features, ticker, range_choice):
     return fig
 
 
-features, summary, results, cio = load_data()
+features, summary, results, cio, memory = load_data()
 
 st.title("AI Investment Committee Room")
 st.caption("Watch specialized agents analyze, disagree, vote, and produce a CIO-ready decision.")
@@ -264,6 +271,41 @@ with bottom1:
                 st.write("Risks")
                 for item in point["risks"] or ["None"]:
                     st.write(f"- {item}")
+
+st.subheader("Committee Memory Timeline")
+
+if not memory.empty:
+    ticker_memory = memory[memory["Ticker"] == ticker].sort_values("Timestamp")
+
+    if not ticker_memory.empty:
+        fig_memory = px.line(
+            ticker_memory,
+            x="Timestamp",
+            y="Committee_Score",
+            markers=True,
+            title=f"{ticker} committee score over time",
+        )
+
+        fig_memory.update_layout(height=300, margin=dict(l=10, r=10, t=45, b=10))
+        st.plotly_chart(fig_memory, use_container_width=True)
+
+        recent_memory = ticker_memory.tail(5)[
+            [
+                "Timestamp",
+                "Final_Action",
+                "Committee_Score",
+                "Buy_Votes",
+                "Hold_Votes",
+                "Sell_Votes",
+                "Avg_Confidence",
+            ]
+        ]
+
+        st.dataframe(recent_memory, use_container_width=True, height=180)
+    else:
+        st.info("No memory yet for this ticker.")
+else:
+    st.info("No committee memory file found yet.")
 
 with bottom2:
     st.subheader("Latest Committee Summary")
